@@ -19,6 +19,7 @@ const Navbar = () => {
     { name: 'Modules', href: '#modules' },
     { name: 'How It Works', href: '#how-it-works' },
     { name: 'Pricing', href: '#pricing' },
+    { name: 'Roadmap', href: '#roadmap' },
   ]
 
   return (

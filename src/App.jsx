@@ -4,6 +4,7 @@ import Features from './components/Features'
 import Modules from './components/Modules'
 import HowItWorks from './components/HowItWorks'
 import Pricing from './components/Pricing'
+import Roadmap from './components/Roadmap'
 import Testimonials from './components/Testimonials'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
@@ -18,6 +19,7 @@ function App() {
         <Modules />
         <HowItWorks />
         <Pricing />
+        <Roadmap />
         <Testimonials />
         <CTA />
       </main>
