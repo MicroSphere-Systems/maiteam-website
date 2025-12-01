@@ -67,8 +67,8 @@ const Pricing = () => {
             position: 'relative',
             backgroundColor: '#0a0a0a',
             border: '2px solid #FF9933',
-            borderRadius: '24px',
-            padding: '48px',
+            borderRadius: '20px',
+            padding: 'clamp(24px, 5vw, 48px)',
             overflow: 'hidden'
           }}
         >
@@ -121,8 +121,8 @@ const Pricing = () => {
           {/* Features Grid */}
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '16px',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))',
+            gap: '14px',
             marginBottom: '40px'
           }}>
             {features.map((feature, idx) => (
@@ -148,32 +148,33 @@ const Pricing = () => {
           <div style={{
             background: 'linear-gradient(135deg, rgba(255, 153, 51, 0.15) 0%, rgba(255, 153, 51, 0.05) 100%)',
             border: '1px solid rgba(255, 153, 51, 0.3)',
-            borderRadius: '16px',
-            padding: '32px',
-            marginBottom: '40px'
+            borderRadius: '12px',
+            padding: 'clamp(20px, 4vw, 32px)',
+            marginBottom: '32px'
           }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
               <div style={{
-                width: '48px',
-                height: '48px',
+                width: '40px',
+                height: '40px',
                 backgroundColor: '#FF9933',
-                borderRadius: '12px',
+                borderRadius: '10px',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                flexShrink: 0
               }}>
-                <GraduationCap style={{ color: '#0a0a0a' }} size={24} />
+                <GraduationCap style={{ color: '#0a0a0a' }} size={20} />
               </div>
-              <div>
-                <h4 style={{ color: '#FF9933', fontSize: '20px', fontWeight: 700, margin: 0 }}>
+              <div style={{ flex: 1, minWidth: '200px' }}>
+                <h4 style={{ color: '#FF9933', fontSize: 'clamp(16px, 4vw, 20px)', fontWeight: 700, margin: 0 }}>
                   7 Days On-Site Training Included
                 </h4>
-                <p style={{ color: '#888', fontSize: '14px', margin: '4px 0 0 0' }}>
+                <p style={{ color: '#888', fontSize: '13px', margin: '4px 0 0 0' }}>
                   Expert-led training at your location
                 </p>
               </div>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: '12px' }}>
               {trainingFeatures.map((feature, idx) => (
                 <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <Check style={{ color: '#FF9933', flexShrink: 0 }} size={16} />
@@ -209,17 +210,16 @@ const Pricing = () => {
           {/* Contact Options */}
           <div style={{
             borderTop: '1px solid #2a2a2a',
-            paddingTop: '32px'
+            paddingTop: '24px'
           }}>
-            <p style={{ color: '#888', fontSize: '14px', textAlign: 'center', marginBottom: '20px' }}>
+            <p style={{ color: '#888', fontSize: '14px', textAlign: 'center', marginBottom: '16px' }}>
               Contact our sales team
             </p>
             <div style={{
               display: 'flex',
-              flexWrap: 'wrap',
+              flexDirection: 'column',
               alignItems: 'center',
-              justifyContent: 'center',
-              gap: '24px'
+              gap: '12px'
             }}>
               <a
                 href="tel:+919166140829"
@@ -230,7 +230,10 @@ const Pricing = () => {
                   color: '#aaa',
                   textDecoration: 'none',
                   fontSize: '14px',
-                  transition: 'color 0.2s'
+                  transition: 'color 0.2s',
+                  padding: '8px 16px',
+                  borderRadius: '8px',
+                  backgroundColor: 'rgba(255,255,255,0.05)'
                 }}
               >
                 <Phone size={18} style={{ color: '#FF9933' }} />
@@ -244,11 +247,15 @@ const Pricing = () => {
                   gap: '8px',
                   color: '#aaa',
                   textDecoration: 'none',
-                  fontSize: '14px',
-                  transition: 'color 0.2s'
+                  fontSize: '13px',
+                  transition: 'color 0.2s',
+                  padding: '8px 16px',
+                  borderRadius: '8px',
+                  backgroundColor: 'rgba(255,255,255,0.05)',
+                  wordBreak: 'break-all'
                 }}
               >
-                <Mail size={18} style={{ color: '#FF9933' }} />
+                <Mail size={18} style={{ color: '#FF9933', flexShrink: 0 }} />
                 <span>sales@microspheresystems.com</span>
               </a>
               <a
@@ -262,7 +269,10 @@ const Pricing = () => {
                   color: '#aaa',
                   textDecoration: 'none',
                   fontSize: '14px',
-                  transition: 'color 0.2s'
+                  transition: 'color 0.2s',
+                  padding: '8px 16px',
+                  borderRadius: '8px',
+                  backgroundColor: 'rgba(255,255,255,0.05)'
                 }}
               >
                 <MessageCircle size={18} style={{ color: '#25D366' }} />

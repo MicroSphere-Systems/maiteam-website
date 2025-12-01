@@ -14,6 +14,26 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Handle mobile nav link click - close menu and scroll to section
+  const handleMobileNavClick = (e, href) => {
+    e.preventDefault()
+    setIsOpen(false)
+
+    // Small delay to allow menu to close, then scroll
+    setTimeout(() => {
+      const targetId = href.replace('#', '')
+      const targetElement = document.getElementById(targetId)
+      if (targetElement) {
+        const navbarHeight = 80
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        })
+      }
+    }, 100)
+  }
+
   const navLinks = [
     { name: 'Features', href: '#features' },
     { name: 'How It Works', href: '#how-it-works' },
@@ -128,26 +148,26 @@ const Navbar = () => {
                     color: '#aaa',
                     textDecoration: 'none',
                     fontSize: '18px',
-                    padding: '8px 0',
+                    padding: '12px 0',
                   }}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => handleMobileNavClick(e, link.href)}
                 >
                   {link.name}
                 </a>
               ))}
               <a
-                href="#get-started"
+                href="#pricing"
                 style={{
                   backgroundColor: '#FF9933',
                   color: '#0a0a0a',
                   fontWeight: 600,
-                  padding: '12px 20px',
+                  padding: '14px 20px',
                   borderRadius: '8px',
                   textDecoration: 'none',
                   textAlign: 'center',
                   marginTop: '16px',
                 }}
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => handleMobileNavClick(e, '#pricing')}
               >
                 Get Started
               </a>

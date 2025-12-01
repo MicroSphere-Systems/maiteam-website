@@ -52,8 +52,8 @@ const PainPoints = () => {
         {/* Comparison Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '32px',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
+          gap: '24px',
           maxWidth: '1000px',
           margin: '0 auto'
         }}>

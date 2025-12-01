@@ -28,19 +28,19 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div style={{
           display: 'flex',
-          flexDirection: 'row',
-          flexWrap: 'wrap',
+          flexDirection: 'column',
           alignItems: 'center',
-          justifyContent: 'space-between',
-          gap: '16px'
+          justifyContent: 'center',
+          gap: '12px',
+          textAlign: 'center'
         }}>
-          <p style={{ color: '#888', fontSize: '14px', margin: 0 }}>
+          <p style={{ color: '#888', fontSize: '13px', margin: 0 }}>
             © {currentYear} Microsphere Systems. All rights reserved.
           </p>
 
           {/* Made in India Badge */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#888', fontSize: '14px' }}>
-            <span style={{ fontSize: '18px' }}>🇮🇳</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#888', fontSize: '13px', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <span style={{ fontSize: '16px' }}>🇮🇳</span>
             <span>Made with</span>
             <Heart style={{ color: '#ef4444', fill: '#ef4444' }} size={14} />
             <span>in India</span>

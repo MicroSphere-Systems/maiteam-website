@@ -111,30 +111,33 @@ const Modules = () => {
                 onClick={() => setExpandedModule(expandedModule === module.id ? null : module.id)}
                 style={{
                   width: '100%',
-                  padding: '24px',
+                  padding: '20px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
                   background: 'none',
                   border: 'none',
                   cursor: 'pointer',
-                  transition: 'background-color 0.2s'
+                  transition: 'background-color 0.2s',
+                  gap: '12px'
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                  <span style={{ fontSize: '28px', fontWeight: 700, color: module.color }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap', flex: 1, minWidth: 0 }}>
+                  <span style={{ fontSize: 'clamp(20px, 4vw, 28px)', fontWeight: 700, color: module.color, flexShrink: 0 }}>
                     {module.name}
                   </span>
-                  <div style={{ textAlign: 'left' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: 600, color: 'white', margin: 0 }}>{module.fullName}</h3>
-                    <p style={{ color: '#888', fontSize: '14px', margin: 0 }}>{module.tagline}</p>
+                  <div style={{ textAlign: 'left', minWidth: 0 }}>
+                    <h3 style={{ fontSize: 'clamp(14px, 3vw, 18px)', fontWeight: 600, color: 'white', margin: 0 }}>{module.fullName}</h3>
+                    <p style={{ color: '#888', fontSize: 'clamp(12px, 2.5vw, 14px)', margin: 0, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{module.tagline}</p>
                   </div>
                 </div>
-                {expandedModule === module.id ? (
-                  <ChevronUp style={{ color: '#888' }} size={24} />
-                ) : (
-                  <ChevronDown style={{ color: '#888' }} size={24} />
-                )}
+                <div style={{ flexShrink: 0 }}>
+                  {expandedModule === module.id ? (
+                    <ChevronUp style={{ color: '#888' }} size={24} />
+                  ) : (
+                    <ChevronDown style={{ color: '#888' }} size={24} />
+                  )}
+                </div>
               </button>
 
               {/* Expanded Content */}
@@ -143,16 +146,20 @@ const Modules = () => {
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
-                  style={{ padding: '0 24px 24px', borderTop: '1px solid #2a2a2a' }}
+                  style={{ padding: '0 20px 20px', borderTop: '1px solid #2a2a2a' }}
                 >
-                  <p style={{ color: '#aaa', padding: '16px 0', margin: 0 }}>{module.description}</p>
+                  <p style={{ color: '#aaa', padding: '16px 0', margin: 0, fontSize: '14px', lineHeight: 1.6 }}>{module.description}</p>
 
                   {/* Agents */}
                   <div style={{ marginBottom: '24px' }}>
                     <h4 style={{ fontSize: '12px', fontWeight: 600, color: '#888', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '16px' }}>
                       AI Agents
                     </h4>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                    <div style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))',
+                      gap: '10px'
+                    }}>
                       {module.agents.map((agent, idx) => (
                         <div
                           key={idx}
@@ -160,16 +167,16 @@ const Modules = () => {
                             backgroundColor: '#1a1a1a',
                             border: '1px solid #2a2a2a',
                             borderRadius: '8px',
-                            padding: '12px 16px',
+                            padding: '10px 14px',
                             display: 'flex',
                             alignItems: 'center',
-                            gap: '12px'
+                            gap: '10px'
                           }}
                         >
-                          <span style={{ fontSize: '24px' }}>{agent.icon}</span>
-                          <div>
-                            <div style={{ color: 'white', fontWeight: 500 }}>{agent.name}</div>
-                            <div style={{ color: '#888', fontSize: '12px' }}>{agent.role}</div>
+                          <span style={{ fontSize: '20px', flexShrink: 0 }}>{agent.icon}</span>
+                          <div style={{ minWidth: 0 }}>
+                            <div style={{ color: 'white', fontWeight: 500, fontSize: '14px' }}>{agent.name}</div>
+                            <div style={{ color: '#888', fontSize: '11px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{agent.role}</div>
                           </div>
                         </div>
                       ))}

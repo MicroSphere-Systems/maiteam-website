@@ -188,7 +188,7 @@ const Hero = () => {
               flexWrap: 'wrap',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: '48px'
+              gap: 'clamp(24px, 5vw, 48px)'
             }}
           >
             {stats.map((stat, index) => (

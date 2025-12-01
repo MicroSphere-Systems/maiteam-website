@@ -1,0 +1,13 @@
+# MAITeam Website
+# https://maiteam-website.vercel.app
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://maiteam-website.vercel.app/sitemap.xml
+
+# Block admin/private paths (if any)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/

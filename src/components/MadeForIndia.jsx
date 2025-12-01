@@ -108,8 +108,8 @@ const MadeForIndia = () => {
         {/* Features Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '24px',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+          gap: '20px',
           maxWidth: '1000px',
           margin: '0 auto 48px'
         }}>

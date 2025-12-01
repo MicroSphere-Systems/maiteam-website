@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Check, X, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 const Comparison = () => {
   const comparisons = [
@@ -56,79 +56,82 @@ const Comparison = () => {
           viewport={{ once: true }}
           style={{ maxWidth: '900px', margin: '0 auto' }}
         >
-          <div style={{
-            backgroundColor: '#18181b',
-            borderRadius: '16px',
-            border: '1px solid #27272a',
-            overflow: 'hidden'
-          }}>
-
-            {/* Table Header */}
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: '2fr 1fr 1fr',
-              backgroundColor: 'rgba(63, 63, 70, 0.3)',
-              padding: '16px 24px',
-              borderBottom: '1px solid #3f3f46'
-            }}>
-              <div style={{ color: '#a1a1aa', fontWeight: 600 }}>Metric</div>
-              <div style={{ color: '#f87171', fontWeight: 600, textAlign: 'center' }}>Traditional</div>
-              <div style={{ color: '#4ade80', fontWeight: 600, textAlign: 'center' }}>With MAITeam</div>
-            </div>
-
-            {/* Table Rows */}
-            {comparisons.map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '2fr 1fr 1fr',
-                  padding: '16px 24px',
-                  borderBottom: index < comparisons.length - 1 ? '1px solid #27272a' : 'none',
-                  backgroundColor: item.highlight ? 'rgba(255, 153, 51, 0.05)' : 'transparent'
-                }}
-              >
-                <div style={{ color: 'white', fontWeight: 500, display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  {item.metric}
-                  {item.highlight && (
-                    <span style={{
-                      fontSize: '10px',
-                      backgroundColor: 'rgba(255, 153, 51, 0.2)',
-                      color: '#FF9933',
-                      padding: '2px 8px',
-                      borderRadius: '4px',
-                      fontWeight: 600
-                    }}>
-                      Key
-                    </span>
-                  )}
-                </div>
-                <div style={{
-                  color: '#f87171',
-                  textAlign: 'center',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '8px',
-                  fontSize: '14px'
-                }}>
-                  <X size={16} style={{ display: 'none' }} className="hidden-mobile" />
-                  {item.traditional}
-                </div>
-                <div style={{
-                  color: '#4ade80',
-                  textAlign: 'center',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '8px',
-                  fontSize: '14px'
-                }}>
-                  <Check size={16} style={{ display: 'none' }} className="hidden-mobile" />
-                  {item.maiteam}
-                </div>
+          <div
+            className="table-scroll-wrapper"
+            style={{
+              backgroundColor: '#18181b',
+              borderRadius: '16px',
+              border: '1px solid #27272a',
+              overflow: 'hidden'
+            }}
+          >
+            <div style={{ minWidth: '600px' }}>
+              {/* Table Header */}
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: '2fr 1fr 1fr',
+                backgroundColor: 'rgba(63, 63, 70, 0.3)',
+                padding: '16px 20px',
+                borderBottom: '1px solid #3f3f46'
+              }}>
+                <div style={{ color: '#a1a1aa', fontWeight: 600, fontSize: '14px' }}>Metric</div>
+                <div style={{ color: '#f87171', fontWeight: 600, textAlign: 'center', fontSize: '14px' }}>Traditional</div>
+                <div style={{ color: '#4ade80', fontWeight: 600, textAlign: 'center', fontSize: '14px' }}>With MAITeam</div>
               </div>
-            ))}
+
+              {/* Table Rows */}
+              {comparisons.map((item, index) => (
+                <div
+                  key={index}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '2fr 1fr 1fr',
+                    padding: '14px 20px',
+                    borderBottom: index < comparisons.length - 1 ? '1px solid #27272a' : 'none',
+                    backgroundColor: item.highlight ? 'rgba(255, 153, 51, 0.05)' : 'transparent'
+                  }}
+                >
+                  <div style={{ color: 'white', fontWeight: 500, display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px' }}>
+                    {item.metric}
+                    {item.highlight && (
+                      <span style={{
+                        fontSize: '10px',
+                        backgroundColor: 'rgba(255, 153, 51, 0.2)',
+                        color: '#FF9933',
+                        padding: '2px 8px',
+                        borderRadius: '4px',
+                        fontWeight: 600,
+                        whiteSpace: 'nowrap'
+                      }}>
+                        Key
+                      </span>
+                    )}
+                  </div>
+                  <div style={{
+                    color: '#f87171',
+                    textAlign: 'center',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '6px',
+                    fontSize: '13px'
+                  }}>
+                    {item.traditional}
+                  </div>
+                  <div style={{
+                    color: '#4ade80',
+                    textAlign: 'center',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '6px',
+                    fontSize: '13px'
+                  }}>
+                    {item.maiteam}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Bottom CTA */}

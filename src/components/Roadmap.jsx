@@ -126,8 +126,8 @@ const Roadmap = () => {
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '20px'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
+            gap: '16px'
           }}>
             {lifetimeUpdates.map((item, index) => (
               <div key={index} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
@@ -185,8 +185,8 @@ const Roadmap = () => {
           {/* Industry Cards Grid */}
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '20px'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
+            gap: '16px'
           }}>
             {industryModules.map((industry, index) => (
               <motion.div
