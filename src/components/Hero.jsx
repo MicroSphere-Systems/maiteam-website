@@ -154,7 +154,7 @@ const Hero = () => {
               }}
             >
               <Rocket size={20} />
-              <span>Get Started Free</span>
+              <span>Get Started</span>
             </a>
             <a
               href="#features"
@@ -202,23 +202,6 @@ const Hero = () => {
             ))}
           </motion.div>
 
-          {/* Trust Badge */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            style={{ marginTop: '64px', color: '#888', fontSize: '14px' }}
-          >
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{
-                width: '8px',
-                height: '8px',
-                backgroundColor: '#138808',
-                borderRadius: '50%'
-              }} />
-              <span>Open Source • MIT License</span>
-            </span>
-          </motion.div>
         </div>
       </div>
 

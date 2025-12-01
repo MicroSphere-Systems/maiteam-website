@@ -83,7 +83,7 @@ const CTA = () => {
                 transition: 'all 0.3s'
               }}
             >
-              <span>Get Started Free</span>
+              <span>Get Started</span>
               <ArrowRight size={20} />
             </a>
             <a
@@ -104,30 +104,6 @@ const CTA = () => {
             </a>
           </div>
 
-          {/* Trust indicators */}
-          <div style={{
-            marginTop: '40px',
-            display: 'flex',
-            flexWrap: 'wrap',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '24px',
-            color: 'rgba(10, 10, 10, 0.7)',
-            fontSize: '14px'
-          }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ width: '8px', height: '8px', backgroundColor: '#0a0a0a', borderRadius: '50%' }} />
-              <span>No credit card required</span>
-            </span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ width: '8px', height: '8px', backgroundColor: '#0a0a0a', borderRadius: '50%' }} />
-              <span>Open source (MIT)</span>
-            </span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ width: '8px', height: '8px', backgroundColor: '#0a0a0a', borderRadius: '50%' }} />
-              <span>Community support</span>
-            </span>
-          </div>
         </motion.div>
       </div>
     </section>

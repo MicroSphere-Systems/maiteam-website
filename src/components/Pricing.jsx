@@ -1,64 +1,31 @@
 import { motion } from 'framer-motion'
-import { Check, Sparkles } from 'lucide-react'
+import { Check, Sparkles, GraduationCap, Phone, Mail, MessageCircle } from 'lucide-react'
 
 const Pricing = () => {
-  const plans = [
-    {
-      name: 'Starter',
-      price: 'Free',
-      period: 'forever',
-      description: 'Perfect for individuals and small projects',
-      features: [
-        'All 3 modules (MAIM, MAIB, CIS)',
-        '17 AI agents',
-        '50+ workflows',
-        '2 IDE support',
-        'Community support',
-        'Web bundles included',
-        'MIT License',
-      ],
-      cta: 'Get Started',
-      popular: false,
-    },
-    {
-      name: 'Pro',
-      price: '₹4,999',
-      period: '/month',
-      description: 'For teams who need more power and support',
-      features: [
-        'Everything in Starter',
-        'All 8 IDEs supported',
-        'Priority support',
-        'Custom branding',
-        'Advanced workflows',
-        'Team collaboration',
-        'Usage analytics',
-      ],
-      cta: 'Start Trial',
-      popular: true,
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'For organizations with advanced needs',
-      features: [
-        'Everything in Pro',
-        'On-premise deployment',
-        'Custom AI agents',
-        'SSO/SAML integration',
-        'Dedicated support',
-        'SLA guarantee',
-        'Training & onboarding',
-      ],
-      cta: 'Contact Sales',
-      popular: false,
-    },
+  const features = [
+    'Complete Framework Access',
+    'All 3 Modules (MAIM, MAIB, CIS)',
+    '17 AI Agents',
+    '50+ Guided Workflows',
+    'All 8 IDE Support',
+    'Web Bundles (ChatGPT, Claude, Gemini)',
+    'Industry Modules',
+    'Commercial License',
+    'Source Code Access',
+    'Lifetime Updates',
+    'Priority Support',
+  ]
+
+  const trainingFeatures = [
+    'Expert trainer at your location',
+    'Hands-on team training',
+    'Implementation assistance',
+    'Best practices workshop',
   ]
 
   return (
     <section id="pricing" style={{ padding: '80px 0 128px', backgroundColor: '#1a1a1a', position: 'relative' }}>
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px' }}>
+      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 24px' }}>
         {/* Section Header */}
         <div style={{ textAlign: 'center', marginBottom: '64px' }}>
           <motion.span
@@ -67,7 +34,7 @@ const Pricing = () => {
             viewport={{ once: true }}
             style={{ color: '#FF9933', fontWeight: 600, fontSize: '14px', textTransform: 'uppercase', letterSpacing: '0.1em' }}
           >
-            Simple Pricing
+            Enterprise Pricing
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
@@ -76,7 +43,7 @@ const Pricing = () => {
             transition={{ delay: 0.1 }}
             style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: 700, color: 'white', marginTop: '16px' }}
           >
-            Choose Your Plan
+            One License, Complete Solution
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -85,118 +52,226 @@ const Pricing = () => {
             transition={{ delay: 0.2 }}
             style={{ color: '#aaa', fontSize: '18px', maxWidth: '640px', margin: '16px auto 0' }}
           >
-            Start free and scale as you grow. No hidden fees.
+            Transform your enterprise development with a lifetime license and expert training.
           </motion.p>
         </div>
 
-        {/* Pricing Cards */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '32px',
-          alignItems: 'start'
-        }}>
-          {plans.map((plan, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className={plan.popular ? 'saffron-glow' : ''}
+        {/* Single Pricing Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="saffron-glow"
+          style={{
+            position: 'relative',
+            backgroundColor: '#0a0a0a',
+            border: '2px solid #FF9933',
+            borderRadius: '24px',
+            padding: '48px',
+            overflow: 'hidden'
+          }}
+        >
+          {/* Premium Badge */}
+          <div style={{
+            position: 'absolute',
+            top: '24px',
+            right: '24px'
+          }}>
+            <span style={{
+              backgroundColor: '#FF9933',
+              color: '#0a0a0a',
+              fontSize: '12px',
+              fontWeight: 700,
+              padding: '6px 16px',
+              borderRadius: '9999px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+              textTransform: 'uppercase',
+              letterSpacing: '0.05em'
+            }}>
+              <Sparkles size={14} />
+              <span>Lifetime License</span>
+            </span>
+          </div>
+
+          {/* Plan Header */}
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <h3 style={{ fontSize: '24px', fontWeight: 700, color: 'white', marginBottom: '16px' }}>
+              MAITeam Enterprise License
+            </h3>
+            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'center', gap: '8px' }}>
+              <span style={{
+                fontSize: 'clamp(48px, 8vw, 72px)',
+                fontWeight: 800,
+                background: 'linear-gradient(135deg, #FF9933 0%, #FFB366 50%, #FF9933 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}>
+                ₹5,00,000
+              </span>
+            </div>
+            <p style={{ color: '#888', fontSize: '16px', marginTop: '8px' }}>
+              One-Time Payment • Lifetime Access
+            </p>
+          </div>
+
+          {/* Features Grid */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '16px',
+            marginBottom: '40px'
+          }}>
+            {features.map((feature, idx) => (
+              <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div style={{
+                  width: '24px',
+                  height: '24px',
+                  backgroundColor: 'rgba(255, 153, 51, 0.1)',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0
+                }}>
+                  <Check style={{ color: '#FF9933' }} size={14} />
+                </div>
+                <span style={{ color: '#ccc', fontSize: '15px' }}>{feature}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Training Highlight Section */}
+          <div style={{
+            background: 'linear-gradient(135deg, rgba(255, 153, 51, 0.15) 0%, rgba(255, 153, 51, 0.05) 100%)',
+            border: '1px solid rgba(255, 153, 51, 0.3)',
+            borderRadius: '16px',
+            padding: '32px',
+            marginBottom: '40px'
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
+              <div style={{
+                width: '48px',
+                height: '48px',
+                backgroundColor: '#FF9933',
+                borderRadius: '12px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <GraduationCap style={{ color: '#0a0a0a' }} size={24} />
+              </div>
+              <div>
+                <h4 style={{ color: '#FF9933', fontSize: '20px', fontWeight: 700, margin: 0 }}>
+                  7 Days On-Site Training Included
+                </h4>
+                <p style={{ color: '#888', fontSize: '14px', margin: '4px 0 0 0' }}>
+                  Expert-led training at your location
+                </p>
+              </div>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
+              {trainingFeatures.map((feature, idx) => (
+                <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <Check style={{ color: '#FF9933', flexShrink: 0 }} size={16} />
+                  <span style={{ color: '#aaa', fontSize: '14px' }}>{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+            <button
               style={{
-                position: 'relative',
-                backgroundColor: '#0a0a0a',
-                border: plan.popular ? '2px solid #FF9933' : '1px solid #2a2a2a',
-                borderRadius: '16px',
-                padding: '32px'
+                backgroundColor: '#FF9933',
+                color: '#0a0a0a',
+                fontWeight: 700,
+                fontSize: '18px',
+                padding: '18px 48px',
+                borderRadius: '12px',
+                border: 'none',
+                cursor: 'pointer',
+                transition: 'all 0.3s',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '10px'
               }}
             >
-              {/* Popular Badge */}
-              {plan.popular && (
-                <div style={{
-                  position: 'absolute',
-                  top: '-16px',
-                  left: '50%',
-                  transform: 'translateX(-50%)'
-                }}>
-                  <span style={{
-                    backgroundColor: '#FF9933',
-                    color: '#0a0a0a',
-                    fontSize: '14px',
-                    fontWeight: 700,
-                    padding: '4px 16px',
-                    borderRadius: '9999px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '4px'
-                  }}>
-                    <Sparkles size={14} />
-                    <span>Popular</span>
-                  </span>
-                </div>
-              )}
+              <span>Get Started</span>
+              <Sparkles size={20} />
+            </button>
+          </div>
 
-              {/* Plan Header */}
-              <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-                <h3 style={{ fontSize: '20px', fontWeight: 700, color: 'white', marginBottom: '8px' }}>{plan.name}</h3>
-                <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'center' }}>
-                  <span style={{
-                    fontSize: 'clamp(36px, 5vw, 48px)',
-                    fontWeight: 700,
-                    color: plan.popular ? '#FF9933' : 'white'
-                  }}>
-                    {plan.price}
-                  </span>
-                  <span style={{ color: '#888', marginLeft: '4px' }}>{plan.period}</span>
-                </div>
-                <p style={{ color: '#888', fontSize: '14px', marginTop: '8px' }}>{plan.description}</p>
-              </div>
-
-              {/* Features */}
-              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 32px 0', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                {plan.features.map((feature, idx) => (
-                  <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                    <Check style={{ color: plan.popular ? '#FF9933' : '#138808', flexShrink: 0, marginTop: '2px' }} size={20} />
-                    <span style={{ color: '#aaa' }}>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* CTA */}
-              <button
+          {/* Contact Options */}
+          <div style={{
+            borderTop: '1px solid #2a2a2a',
+            paddingTop: '32px'
+          }}>
+            <p style={{ color: '#888', fontSize: '14px', textAlign: 'center', marginBottom: '20px' }}>
+              Contact our sales team
+            </p>
+            <div style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '24px'
+            }}>
+              <a
+                href="tel:+919166140829"
                 style={{
-                  width: '100%',
-                  padding: '12px',
-                  borderRadius: '8px',
-                  fontWeight: 600,
-                  fontSize: '16px',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s',
-                  backgroundColor: plan.popular ? '#FF9933' : 'transparent',
-                  color: plan.popular ? '#0a0a0a' : '#FF9933',
-                  border: plan.popular ? 'none' : '2px solid #FF9933'
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  color: '#aaa',
+                  textDecoration: 'none',
+                  fontSize: '14px',
+                  transition: 'color 0.2s'
                 }}
               >
-                {plan.cta}
-              </button>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Money Back Guarantee */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          style={{ textAlign: 'center', marginTop: '48px' }}
-        >
-          <p style={{ color: '#888', fontSize: '14px' }}>
-            <span style={{ color: '#138808', marginRight: '8px' }}>✓</span>
-            30-day money-back guarantee • No credit card required for free tier
-          </p>
+                <Phone size={18} style={{ color: '#FF9933' }} />
+                <span>+91-91661-40829</span>
+              </a>
+              <a
+                href="mailto:sales@microspheresystems.com"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  color: '#aaa',
+                  textDecoration: 'none',
+                  fontSize: '14px',
+                  transition: 'color 0.2s'
+                }}
+              >
+                <Mail size={18} style={{ color: '#FF9933' }} />
+                <span>sales@microspheresystems.com</span>
+              </a>
+              <a
+                href="https://wa.me/919166140829"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  color: '#aaa',
+                  textDecoration: 'none',
+                  fontSize: '14px',
+                  transition: 'color 0.2s'
+                }}
+              >
+                <MessageCircle size={18} style={{ color: '#25D366' }} />
+                <span>WhatsApp</span>
+              </a>
+            </div>
+          </div>
         </motion.div>
+
       </div>
     </section>
   )
