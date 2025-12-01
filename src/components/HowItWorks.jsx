@@ -1,180 +1,196 @@
 import { motion } from 'framer-motion'
-import { Terminal, Settings, Rocket } from 'lucide-react'
+import { MessageSquare, Cpu, Rocket, ArrowRight } from 'lucide-react'
 
 const HowItWorks = () => {
   const steps = [
     {
-      number: '01',
-      icon: Terminal,
-      title: 'Install',
-      description: 'One command to get started with MAITeam in your project.',
-      code: 'npx maiteam install',
+      number: "01",
+      icon: MessageSquare,
+      title: "Tell Rahul What You Need",
+      description: "Just describe your project in plain English or Hindi. 'Build a payment app with UPI integration'",
+      example: '"Rahul, I need a customer portal with login, dashboard, and payment integration"',
+      color: '#3b82f6'
     },
     {
-      number: '02',
-      icon: Settings,
-      title: 'Configure',
-      description: 'Select your modules, IDEs, and language preferences.',
-      code: '*workflow-init',
+      number: "02",
+      icon: Cpu,
+      title: "AI Agents Build Everything",
+      description: "17 specialized agents work together. PRD, Architecture, Code, Tests - all created automatically.",
+      agents: ["Rahul (PM)", "Arjun (Architect)", "Priya (Developer)", "Deepak (Tester)"],
+      color: '#FF9933'
     },
     {
-      number: '03',
+      number: "03",
       icon: Rocket,
-      title: 'Build',
-      description: 'AI agents help you build faster with guided workflows.',
-      code: 'Start building!',
-    },
+      title: "Review & Ship",
+      description: "Your human engineers review AI work, make adjustments, and deploy. Quality guaranteed.",
+      example: "Human + AI = Perfect Output",
+      color: '#22c55e'
+    }
   ]
 
   return (
-    <section id="how-it-works" style={{ padding: '80px 0 128px', backgroundColor: '#0a0a0a', position: 'relative' }}>
-      <div className="section-divider" style={{ marginBottom: '80px' }} />
-
+    <section id="how-it-works" style={{ padding: '80px 0', backgroundColor: '#18181b' }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px' }}>
-        {/* Section Header */}
+
+        {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-          <motion.span
+          <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            style={{ color: '#FF9933', fontWeight: 600, fontSize: '14px', textTransform: 'uppercase', letterSpacing: '0.1em' }}
+            style={{ color: '#FF9933', fontWeight: 600, fontSize: '14px', marginBottom: '8px' }}
           >
-            Getting Started
-          </motion.span>
+            SIMPLE PROCESS
+          </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: 700, color: 'white', marginTop: '16px' }}
+            style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: 700, color: 'white', marginBottom: '16px' }}
           >
-            How It Works
+            How MAITeam Works
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            style={{ color: '#aaa', fontSize: '18px', maxWidth: '640px', margin: '16px auto 0' }}
+            style={{ color: '#a1a1aa', maxWidth: '600px', margin: '0 auto' }}
           >
-            Get up and running in minutes with three simple steps.
+            From idea to production in 3 simple steps. No complex setup.
           </motion.p>
         </div>
 
         {/* Steps */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '48px'
-        }}>
-          {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
-              style={{ position: 'relative', textAlign: 'center' }}
-            >
-              {/* Step Number */}
-              <div style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '96px',
-                height: '96px',
-                borderRadius: '50%',
-                backgroundColor: '#1a1a1a',
-                border: '2px solid rgba(255, 153, 51, 0.3)',
-                marginBottom: '24px',
-                position: 'relative'
-              }}>
-                <step.icon style={{ color: '#FF9933' }} size={32} />
-                <span style={{
-                  position: 'absolute',
-                  top: '-8px',
-                  right: '-8px',
-                  width: '32px',
-                  height: '32px',
-                  backgroundColor: '#FF9933',
-                  color: '#0a0a0a',
-                  fontSize: '14px',
-                  fontWeight: 700,
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '32px'
+          }}>
+            {steps.map((step, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                style={{ position: 'relative' }}
+              >
+                {/* Connector Arrow (hidden on mobile) */}
+                {index < steps.length - 1 && (
+                  <div style={{
+                    display: 'none',
+                    position: 'absolute',
+                    top: '64px',
+                    left: '100%',
+                    width: '100%',
+                    height: '2px',
+                    background: 'linear-gradient(to right, #3f3f46, transparent)',
+                    zIndex: 0
+                  }} className="connector-line">
+                    <ArrowRight style={{
+                      position: 'absolute',
+                      right: 0,
+                      top: '50%',
+                      transform: 'translateY(-50%)',
+                      color: '#52525b'
+                    }} size={16} />
+                  </div>
+                )}
+
+                {/* Step Card */}
+                <div style={{
+                  backgroundColor: 'rgba(63, 63, 70, 0.3)',
+                  border: '1px solid #3f3f46',
+                  borderRadius: '16px',
+                  padding: '32px',
+                  height: '100%',
+                  position: 'relative',
+                  zIndex: 10,
+                  transition: 'border-color 0.3s'
                 }}>
-                  {step.number}
-                </span>
-              </div>
 
-              {/* Content */}
-              <h3 style={{ fontSize: '20px', fontWeight: 700, color: 'white', marginBottom: '12px' }}>{step.title}</h3>
-              <p style={{ color: '#aaa', marginBottom: '16px' }}>{step.description}</p>
+                  {/* Number Badge */}
+                  <div style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: '48px',
+                    height: '48px',
+                    borderRadius: '12px',
+                    backgroundColor: step.color,
+                    color: step.color === '#FF9933' ? '#0a0a0a' : 'white',
+                    fontWeight: 700,
+                    fontSize: '18px',
+                    marginBottom: '24px'
+                  }}>
+                    {step.number}
+                  </div>
 
-              {/* Code Block */}
-              <div style={{
-                backgroundColor: '#1a1a1a',
-                border: '1px solid #2a2a2a',
-                borderRadius: '8px',
-                padding: '12px 16px',
-                fontFamily: 'monospace',
-                fontSize: '14px'
-              }}>
-                <span style={{ color: '#888' }}>$</span>
-                <span style={{ color: '#FF9933', marginLeft: '8px' }}>{step.code}</span>
-              </div>
-            </motion.div>
-          ))}
+                  {/* Icon */}
+                  <step.icon style={{ color: '#FF9933', marginBottom: '16px' }} size={32} />
+
+                  {/* Content */}
+                  <h3 style={{ fontSize: '20px', fontWeight: 700, color: 'white', marginBottom: '12px' }}>{step.title}</h3>
+                  <p style={{ color: '#a1a1aa', marginBottom: '16px', lineHeight: 1.6 }}>{step.description}</p>
+
+                  {/* Example or Agents */}
+                  {step.example && (
+                    <div style={{
+                      backgroundColor: 'rgba(10, 10, 10, 0.5)',
+                      borderRadius: '8px',
+                      padding: '12px',
+                      border: '1px solid #3f3f46'
+                    }}>
+                      <p style={{ color: '#d1d5db', fontSize: '14px', fontStyle: 'italic', margin: 0 }}>{step.example}</p>
+                    </div>
+                  )}
+                  {step.agents && (
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                      {step.agents.map((agent, aIndex) => (
+                        <span key={aIndex} style={{
+                          fontSize: '12px',
+                          backgroundColor: 'rgba(255, 153, 51, 0.1)',
+                          color: '#FF9933',
+                          padding: '4px 12px',
+                          borderRadius: '6px',
+                          border: '1px solid rgba(255, 153, 51, 0.2)'
+                        }}>
+                          {agent}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
-        {/* Tracks */}
+        {/* Time Highlight */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          style={{
-            marginTop: '80px',
-            backgroundColor: '#1a1a1a',
-            border: '1px solid #2a2a2a',
-            borderRadius: '12px',
-            padding: '32px'
-          }}
+          style={{ textAlign: 'center', marginTop: '48px' }}
         >
-          <h3 style={{ fontSize: '20px', fontWeight: 700, color: 'white', marginBottom: '24px', textAlign: 'center' }}>Choose Your Track</h3>
           <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-            gap: '24px'
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '16px',
+            backgroundColor: '#27272a',
+            border: '1px solid #3f3f46',
+            borderRadius: '9999px',
+            padding: '12px 24px'
           }}>
-            <div style={{ textAlign: 'center', padding: '16px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '32px', marginBottom: '12px' }}>⚡</div>
-              <h4 style={{ color: 'white', fontWeight: 600, marginBottom: '8px' }}>Fast Track</h4>
-              <p style={{ color: '#888', fontSize: '14px' }}>Quick features & bug fixes</p>
-              <p style={{ color: '#FF9933', fontSize: '12px', marginTop: '8px' }}>&lt; 5 minutes setup</p>
-            </div>
-            <div style={{
-              textAlign: 'center',
-              padding: '16px',
-              borderRadius: '8px',
-              backgroundColor: 'rgba(255, 153, 51, 0.05)',
-              border: '1px solid rgba(255, 153, 51, 0.2)'
-            }}>
-              <div style={{ fontSize: '32px', marginBottom: '12px' }}>🚀</div>
-              <h4 style={{ color: 'white', fontWeight: 600, marginBottom: '8px' }}>MAITeam Method</h4>
-              <p style={{ color: '#888', fontSize: '14px' }}>Full products & platforms</p>
-              <p style={{ color: '#FF9933', fontSize: '12px', marginTop: '8px' }}>~15 minutes setup</p>
-            </div>
-            <div style={{ textAlign: 'center', padding: '16px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '32px', marginBottom: '12px' }}>🏢</div>
-              <h4 style={{ color: 'white', fontWeight: 600, marginBottom: '8px' }}>Enterprise</h4>
-              <p style={{ color: '#888', fontSize: '14px' }}>Full governance suite</p>
-              <p style={{ color: '#FF9933', fontSize: '12px', marginTop: '8px' }}>~30 minutes setup</p>
-            </div>
+            <span style={{ color: '#a1a1aa' }}>Total Time:</span>
+            <span style={{ fontSize: '24px', fontWeight: 700, color: '#FF9933' }}>Hours, Not Months</span>
           </div>
         </motion.div>
+
       </div>
     </section>
   )

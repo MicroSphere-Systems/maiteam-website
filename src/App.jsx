@@ -1,27 +1,33 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import PainPoints from './components/PainPoints'
 import Features from './components/Features'
-import Modules from './components/Modules'
 import HowItWorks from './components/HowItWorks'
-import Pricing from './components/Pricing'
+import ROICalculator from './components/ROICalculator'
+import Comparison from './components/Comparison'
+import Modules from './components/Modules'
+import CaseStudies from './components/CaseStudies'
+import MadeForIndia from './components/MadeForIndia'
 import Roadmap from './components/Roadmap'
-import Testimonials from './components/Testimonials'
-import CTA from './components/CTA'
+import Pricing from './components/Pricing'
 import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="min-h-screen bg-dark">
+    <div style={{ minHeight: '100vh', backgroundColor: '#0a0a0a', color: 'white' }}>
       <Navbar />
       <main>
         <Hero />
+        <PainPoints />
         <Features />
-        <Modules />
         <HowItWorks />
-        <Pricing />
+        <ROICalculator />
+        <Comparison />
+        <Modules />
+        <CaseStudies />
+        <MadeForIndia />
         <Roadmap />
-        <Testimonials />
-        <CTA />
+        <Pricing />
       </main>
       <Footer />
     </div>

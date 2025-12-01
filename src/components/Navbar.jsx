@@ -16,10 +16,11 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Features', href: '#features' },
-    { name: 'Modules', href: '#modules' },
     { name: 'How It Works', href: '#how-it-works' },
+    { name: 'ROI Calculator', href: '#roi-calculator' },
+    { name: 'Modules', href: '#modules' },
+    { name: 'Case Studies', href: '#case-studies' },
     { name: 'Pricing', href: '#pricing' },
-    { name: 'Roadmap', href: '#roadmap' },
   ]
 
   return (
