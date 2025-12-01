@@ -68,9 +68,7 @@ const CTA = () => {
             flexWrap: 'wrap'
           }}>
             <a
-              href="https://github.com/maiteam-code-org/MAITeam"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#pricing"
               style={{
                 backgroundColor: '#0a0a0a',
                 color: 'white',
@@ -89,9 +87,7 @@ const CTA = () => {
               <ArrowRight size={20} />
             </a>
             <a
-              href="https://discord.gg/gk8jAdXWmj"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#features"
               style={{
                 backgroundColor: 'transparent',
                 border: '2px solid #0a0a0a',
@@ -104,7 +100,7 @@ const CTA = () => {
                 transition: 'all 0.3s'
               }}
             >
-              Join Discord
+              Explore Features
             </a>
           </div>
 

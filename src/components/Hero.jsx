@@ -157,9 +157,7 @@ const Hero = () => {
               <span>Get Started Free</span>
             </a>
             <a
-              href="https://github.com/maiteam-code-org/MAITeam"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#features"
               style={{
                 border: '2px solid #FF9933',
                 color: '#FF9933',
@@ -176,7 +174,7 @@ const Hero = () => {
               }}
             >
               <BookOpen size={20} />
-              <span>View Documentation</span>
+              <span>Learn More</span>
             </a>
           </motion.div>
 

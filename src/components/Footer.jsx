@@ -1,4 +1,4 @@
-import { Github, Youtube, MessageCircle, Heart } from 'lucide-react'
+import { Mail, Heart } from 'lucide-react'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -12,10 +12,9 @@ const Footer = () => {
       { name: 'Roadmap', href: '#' },
     ],
     resources: [
-      { name: 'Documentation', href: 'https://github.com/maiteam-code-org/MAITeam' },
-      { name: 'GitHub', href: 'https://github.com/maiteam-code-org/MAITeam' },
-      { name: 'Discord', href: 'https://discord.gg/gk8jAdXWmj' },
-      { name: 'YouTube', href: 'https://youtube.com/@MAITeamCode' },
+      { name: 'Documentation', href: '#' },
+      { name: 'Getting Started', href: '#how-it-works' },
+      { name: 'API Reference', href: '#' },
       { name: 'Blog', href: '#' },
     ],
     company: [
@@ -32,9 +31,7 @@ const Footer = () => {
   }
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/maiteam-code-org/MAITeam', label: 'GitHub' },
-    { icon: MessageCircle, href: 'https://discord.gg/gk8jAdXWmj', label: 'Discord' },
-    { icon: Youtube, href: 'https://youtube.com/@MAITeamCode', label: 'YouTube' },
+    { icon: Mail, href: 'mailto:contact@microspheresystems.com', label: 'Email' },
   ]
 
   return (

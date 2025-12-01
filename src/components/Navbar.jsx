@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Github, ExternalLink } from 'lucide-react'
+import { Menu, X, ExternalLink } from 'lucide-react'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -74,16 +74,6 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://github.com/maiteam-code-org/MAITeam"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: '#aaa', transition: 'color 0.2s' }}
-              onMouseEnter={(e) => e.target.style.color = '#FF9933'}
-              onMouseLeave={(e) => e.target.style.color = '#aaa'}
-            >
-              <Github size={20} />
-            </a>
-            <a
               href="#get-started"
               style={{
                 backgroundColor: '#FF9933',
@@ -143,17 +133,6 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <div style={{ paddingTop: '16px', borderTop: '1px solid #2a2a2a', display: 'flex', alignItems: 'center', gap: '16px' }}>
-                <a
-                  href="https://github.com/maiteam-code-org/MAITeam"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: '#aaa', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}
-                >
-                  <Github size={20} />
-                  <span>GitHub</span>
-                </a>
-              </div>
               <a
                 href="#get-started"
                 style={{
