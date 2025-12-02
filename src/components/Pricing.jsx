@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Check, Sparkles, GraduationCap, Phone, Mail, MessageCircle } from 'lucide-react'
+import { Check, Sparkles, GraduationCap, Phone, MessageCircle } from 'lucide-react'
 
 const Pricing = () => {
   const features = [
@@ -238,25 +238,6 @@ const Pricing = () => {
               >
                 <Phone size={18} style={{ color: '#FF9933' }} />
                 <span>+91-91661-40829</span>
-              </a>
-              <a
-                href="mailto:sales@microspheresystems.com"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  color: '#aaa',
-                  textDecoration: 'none',
-                  fontSize: '13px',
-                  transition: 'color 0.2s',
-                  padding: '8px 16px',
-                  borderRadius: '8px',
-                  backgroundColor: 'rgba(255,255,255,0.05)',
-                  wordBreak: 'break-all'
-                }}
-              >
-                <Mail size={18} style={{ color: '#FF9933', flexShrink: 0 }} />
-                <span>sales@microspheresystems.com</span>
               </a>
               <a
                 href="https://wa.me/919166140829"
