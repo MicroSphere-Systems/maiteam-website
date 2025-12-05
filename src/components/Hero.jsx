@@ -3,9 +3,9 @@ import { Rocket, BookOpen, Users, Workflow, Monitor } from 'lucide-react'
 
 const Hero = () => {
   const stats = [
-    { icon: Users, value: '17', label: 'AI Agents' },
-    { icon: Workflow, value: '50+', label: 'Workflows' },
-    { icon: Monitor, value: '8', label: 'IDE Support' },
+    { icon: Users, value: '52', label: 'AI Agents' },
+    { icon: Workflow, value: '114+', label: 'Workflows' },
+    { icon: Monitor, value: '15+', label: 'IDE Support' },
   ]
 
   return (
@@ -69,9 +69,7 @@ const Hero = () => {
               marginBottom: '32px'
             }}
           >
-            <span style={{ fontSize: '18px' }}>🙏</span>
             <span style={{ color: '#aaa', fontSize: '14px' }}>AI Agents + Human Engineers</span>
-            <span style={{ fontSize: '18px' }}>🙏</span>
           </motion.div>
 
           {/* Main Title */}
