@@ -1,7 +1,14 @@
 import { motion } from 'framer-motion'
-import { Check, Sparkles } from 'lucide-react'
+import { Check, Sparkles, Rocket } from 'lucide-react'
 
 const Roadmap = () => {
+  const recentReleases = [
+    { title: 'MAILM - Legacy Migration', description: 'Zero logic loss migration with 80% time savings' },
+    { title: 'MAINE - Enterprise Module', description: 'Full SDLC with SOC2, HIPAA, PCI-DSS compliance' },
+    { title: 'Parallel Agent Execution', description: '10+ agents working simultaneously' },
+    { title: 'None Option', description: 'Skip optional workflow steps' },
+  ]
+
   const lifetimeUpdates = [
     { title: 'Lifetime Updates', description: 'Always get the latest version' },
     { title: 'New Agents & Workflows', description: 'Added regularly' },
@@ -44,12 +51,73 @@ const Roadmap = () => {
           </motion.p>
         </div>
 
-        {/* Lifetime Updates */}
+        {/* Recent Releases */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
+          style={{
+            backgroundColor: '#1a1a1a',
+            border: '1px solid #138808',
+            borderRadius: '16px',
+            padding: '40px',
+            marginBottom: '24px',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '32px' }}>
+            <div style={{
+              width: '48px',
+              height: '48px',
+              backgroundColor: 'rgba(19, 136, 8, 0.1)',
+              borderRadius: '12px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}>
+              <Rocket style={{ color: '#138808' }} size={24} />
+            </div>
+            <div>
+              <h3 style={{ color: 'white', fontSize: '20px', fontWeight: 700, margin: 0 }}>
+                Recent Releases
+              </h3>
+              <p style={{ color: '#888', fontSize: '14px', margin: '4px 0 0 0' }}>
+                Latest enhancements to the framework
+              </p>
+            </div>
+          </div>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
+            gap: '16px'
+          }}>
+            {recentReleases.map((item, index) => (
+              <div key={index} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                <div style={{
+                  padding: '4px 8px',
+                  backgroundColor: 'rgba(19, 136, 8, 0.2)',
+                  borderRadius: '4px',
+                  flexShrink: 0,
+                  marginTop: '2px'
+                }}>
+                  <span style={{ color: '#138808', fontSize: '10px', fontWeight: 700, textTransform: 'uppercase' }}>NEW</span>
+                </div>
+                <div>
+                  <span style={{ color: 'white', fontWeight: 600, fontSize: '15px' }}>{item.title}</span>
+                  <span style={{ color: '#888', fontSize: '14px' }}> — {item.description}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Lifetime Updates */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
           style={{
             backgroundColor: '#1a1a1a',
             border: '1px solid #2a2a2a',
