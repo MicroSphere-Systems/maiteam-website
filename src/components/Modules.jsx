@@ -55,6 +55,49 @@ const Modules = () => {
       ],
       workflow: ['Ideate', 'Prototype', 'Validate', 'Refine'],
     },
+    {
+      id: 'mailm',
+      name: 'MAILM',
+      fullName: 'MAITeam Legacy Migration',
+      tagline: 'Zero Logic Loss Migration',
+      description: 'Enterprise legacy code migration with 100% code coverage. Parallel execution with 80% time savings.',
+      color: '#138808',
+      agents: [
+        { name: 'Raj', role: 'Migration PM', icon: '📋' },
+        { name: 'Arjun', role: 'Migration Architect', icon: '🏗️' },
+        { name: 'Maya', role: 'Legacy Analyst', icon: '🔍' },
+        { name: 'Vikram', role: 'Migration Developer', icon: '💻' },
+        { name: 'Lakshmi', role: 'Data Migrator', icon: '🗃️' },
+        { name: 'Sneha', role: 'Frontend Migrator', icon: '🎨' },
+        { name: 'Rohit', role: 'API Migrator', icon: '🔌' },
+        { name: 'Deepak', role: 'Test Migrator', icon: '🧪' },
+        { name: 'Neha', role: 'Migration Validator', icon: '✅' },
+      ],
+      workflow: ['Discovery', 'Analysis', 'Planning', 'Execution', 'Validation'],
+    },
+    {
+      id: 'maine',
+      name: 'MAINE',
+      fullName: 'MAITeam New Enterprise',
+      tagline: 'Full SDLC Enterprise Development',
+      description: 'Complete 8-phase enterprise application development with built-in SOC2, HIPAA, PCI-DSS, GDPR compliance.',
+      color: '#FF9933',
+      agents: [
+        { name: 'Priya', role: 'Enterprise PM', icon: '📋' },
+        { name: 'Arjun', role: 'Enterprise Architect', icon: '🏗️' },
+        { name: 'Meera', role: 'Compliance Officer', icon: '📜' },
+        { name: 'Kiran', role: 'Security Architect', icon: '🔐' },
+        { name: 'Sanjay', role: 'Release Manager', icon: '🚀' },
+        { name: 'Arun', role: 'DevOps Engineer', icon: '⚙️' },
+        { name: 'Ravi', role: 'SRE Engineer', icon: '📊' },
+        { name: 'Deepa', role: 'Infrastructure Architect', icon: '☁️' },
+        { name: 'Vikram', role: 'Platform Engineer', icon: '🔧' },
+        { name: 'Ananya', role: 'Data Architect', icon: '🗄️' },
+        { name: 'Rohan', role: 'Enterprise QA', icon: '🧪' },
+        { name: 'Neha', role: 'Audit Analyst', icon: '📝' },
+      ],
+      workflow: ['Research', 'Planning', 'Design', 'Development', 'Deployment', 'Operations', 'Evolution'],
+    },
   ]
 
   return (
@@ -77,7 +120,7 @@ const Modules = () => {
             transition={{ delay: 0.1 }}
             style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: 700, color: 'white', marginTop: '16px' }}
           >
-            Three Modules, Endless Possibilities
+            Five Modules, Endless Possibilities
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
