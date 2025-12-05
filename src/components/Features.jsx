@@ -7,7 +7,7 @@ import {
   Layers,
   Settings,
   Monitor,
-  TrendingUp
+  Zap
 } from 'lucide-react'
 
 const Features = () => {
@@ -17,18 +17,18 @@ const Features = () => {
   const features = [
     {
       icon: Users,
-      title: '17 AI Agents',
-      description: 'Specialized agents for PM, Architect, Developer, Testing & more. Each with domain expertise.',
+      title: '52 AI Agents',
+      description: 'Specialized agents for PM, Architect, Developer, Testing, Migration, DevOps & more.',
     },
     {
       icon: Workflow,
-      title: '50+ Workflows',
+      title: '114+ Workflows',
       description: 'Complete SDLC coverage from planning to deployment with guided, structured processes.',
     },
     {
       icon: Layers,
-      title: '3 Modules',
-      description: 'MAIM for development, MAIB for building custom agents, CIS for creative intelligence.',
+      title: '5 Modules',
+      description: 'MAIM, MAIB, CIS, MAILM (Legacy Migration), MAINE (Enterprise Development).',
     },
     {
       icon: Settings,
@@ -37,13 +37,13 @@ const Features = () => {
     },
     {
       icon: Monitor,
-      title: '8 IDE Support',
+      title: '15+ IDE Support',
       description: 'Claude Code, Cursor, Windsurf, VS Code, GitHub Copilot, and more platforms.',
     },
     {
-      icon: TrendingUp,
-      title: 'Scale-Adaptive',
-      description: 'From quick bug fixes to enterprise systems. Auto-adjusts complexity to your needs.',
+      icon: Zap,
+      title: 'Parallel Execution',
+      description: '80% faster development. 10+ agents work simultaneously on complex tasks.',
     },
   ]
 
