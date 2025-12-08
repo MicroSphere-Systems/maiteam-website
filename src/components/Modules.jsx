@@ -55,6 +55,82 @@ const Modules = () => {
       ],
       workflow: ['Ideate', 'Prototype', 'Validate', 'Refine'],
     },
+    {
+      id: 'maia',
+      name: 'MAIA',
+      fullName: 'MAITeam Agentic Intelligence',
+      tagline: 'Autonomous AI-Powered Coding with Self-Correction',
+      description: 'Comprehensive agentic coding framework with autonomous execution, self-correction, and multi-agent swarm coordination.',
+      color: '#138808',
+      agents: [
+        { name: 'Nova', role: 'Autonomous Developer', icon: '🤖' },
+        { name: 'Atlas', role: 'Code Architect', icon: '🏗️' },
+        { name: 'Sage', role: 'Code Reviewer', icon: '👁️' },
+        { name: 'Sherlock', role: 'Debugging Agent', icon: '🔍' },
+        { name: 'Vera', role: 'Test Engineer', icon: '🧪' },
+        { name: 'Sentinel', role: 'Security Auditor', icon: '🛡️' },
+        { name: 'Phoenix', role: 'Refactoring Specialist', icon: '🔄' },
+      ],
+      workflow: ['Analyze', 'Execute', 'Self-Correct', 'Learn'],
+    },
+    {
+      id: 'mait',
+      name: 'MAIT',
+      fullName: 'MAITeam Autonomous',
+      tagline: 'Fully Autonomous SDLC from Idea to Deployment',
+      description: 'Complete autonomous project execution with intelligent discovery, gate-based progression, and configurable autonomy profiles.',
+      color: '#FF9933',
+      agents: [
+        { name: 'Aria', role: 'Discovery Facilitator', icon: '🎯' },
+        { name: 'Nexus', role: 'Team Orchestrator', icon: '🎭' },
+        { name: 'Guardian', role: 'Gate Controller', icon: '🚦' },
+        { name: 'Beacon', role: 'Progress Reporter', icon: '📊' },
+      ],
+      workflow: ['Discovery', 'Planning', 'Design', 'Implementation', 'QA', 'Deploy'],
+    },
+    {
+      id: 'maine',
+      name: 'MAINE',
+      fullName: 'MAITeam New Enterprise',
+      tagline: 'Enterprise Development with Built-in Compliance',
+      description: 'Complete 8-phase SDLC for enterprise applications with SOC2, HIPAA, PCI-DSS, GDPR, and ISO27001 compliance built-in.',
+      color: '#138808',
+      agents: [
+        { name: 'Priya', role: 'Enterprise PM', icon: '📋' },
+        { name: 'Arjun', role: 'Enterprise Architect', icon: '🏛️' },
+        { name: 'Meera', role: 'Compliance Officer', icon: '✅' },
+        { name: 'Kiran', role: 'Security Architect', icon: '🔐' },
+        { name: 'Sanjay', role: 'Release Manager', icon: '🚀' },
+        { name: 'Arun', role: 'DevOps Engineer', icon: '⚙️' },
+        { name: 'Ravi', role: 'SRE Engineer', icon: '📈' },
+        { name: 'Deepa', role: 'Infrastructure Architect', icon: '☁️' },
+        { name: 'Vikram', role: 'Platform Engineer', icon: '🔧' },
+        { name: 'Ananya', role: 'Data Architect', icon: '🗄️' },
+        { name: 'Rohan', role: 'Enterprise QA', icon: '🧪' },
+        { name: 'Neha', role: 'Audit Analyst', icon: '📝' },
+      ],
+      workflow: ['Research', 'Planning', 'Design', 'Development', 'Deployment', 'Operations'],
+    },
+    {
+      id: 'mailm',
+      name: 'MAILM',
+      fullName: 'MAITeam Legacy Migration',
+      tagline: 'Zero Logic Loss Migration System',
+      description: 'Transform legacy codebases into modern architectures with 100% accuracy, full traceability, and test-first migration.',
+      color: '#FF9933',
+      agents: [
+        { name: 'Raj', role: 'Migration PM', icon: '📋' },
+        { name: 'Arjun', role: 'Migration Architect', icon: '🏗️' },
+        { name: 'Maya', role: 'Legacy Analyst', icon: '🔬' },
+        { name: 'Vikram', role: 'Migration Developer', icon: '💻' },
+        { name: 'Lakshmi', role: 'Data Migrator', icon: '🗃️' },
+        { name: 'Sneha', role: 'Frontend Migrator', icon: '🎨' },
+        { name: 'Rohit', role: 'API Migrator', icon: '🔌' },
+        { name: 'Deepak', role: 'Test Migrator', icon: '🧪' },
+        { name: 'Neha', role: 'Migration Validator', icon: '✓' },
+      ],
+      workflow: ['Discovery', 'Analysis', 'Planning', 'Execution', 'Validation'],
+    },
   ]
 
   return (
@@ -77,7 +153,7 @@ const Modules = () => {
             transition={{ delay: 0.1 }}
             style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: 700, color: 'white', marginTop: '16px' }}
           >
-            Three Modules, Endless Possibilities
+            Seven Modules, Endless Possibilities
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
